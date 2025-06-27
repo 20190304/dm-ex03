@@ -3,9 +3,17 @@
 #include <time.h>
 
 int main() {
+
+  char name[50];
   int die1, die2, total;
+
+  printf("What is your name?\n> ");
+  scanf("%s", name);
+
+  printf("Hello, %s!\n", name);
   
-  srand(time(NULL));
+  srand(time(NULL)); 
+
 
 die1 = (rand() % 6) + 1;
 die2 = (rand() % 6) + 1;
@@ -21,6 +29,6 @@ if (total > 7) {
 } else {
   printf("You lost!\n");
 }
-  
+ 
 return 0;
 }
